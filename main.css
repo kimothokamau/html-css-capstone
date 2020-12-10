@@ -6,7 +6,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  color: #272A31
+  color: #272a31;
 }
 
 .menu-items {
@@ -15,40 +15,40 @@ body {
   flex: 2 0 20%;
 }
 
-header ul li{
+header ul li {
   font-size: 14px;
 }
 
 .text-grey {
-  color: #D3D3D3
+  color: #d3d3d3;
 }
 
 .text-orange {
-  color: #EC5242;
+  color: #ec5242;
 }
 
 .text-black {
-  color: #272A31;
+  color: #272a31;
 }
 
 .bg-grey {
-  background-color: #D3D3D3;
+  background-color: #d3d3d3;
 }
 
 .bg-orange {
-  background-color: #EC5242;
+  background-color: #ec5242;
 }
 
 .bg-black {
-  background-color: #272A31;
+  background-color: #272a31;
 }
 
 .page-holder {
   min-height: 90vh;
-  background-image: linear-gradient(to bottom, rgba(236, 82, 66), rgba(211, 211, 211, 0.5)),
-  url(https://images.pexels.com/photos/2833037/pexels-photo-2833037.jpeg?cs=srgb&dl=pexels-luis-quintero-2833037.jpg&);
+  background-image:
+    linear-gradient(to bottom, rgba(236, 82, 66), rgba(211, 211, 211, 0.5)),
+    url(https://images.pexels.com/photos/2833037/pexels-photo-2833037.jpeg?cs=srgb&dl=pexels-luis-quintero-2833037.jpg&);
   opacity: 0.9;
-
 }
 
 .bg-cover {
@@ -58,7 +58,7 @@ header ul li{
 .main-page {
   display: grid;
   grid-template-rows: 300px 300px 100px;
-  grid-template-areas: 
+  grid-template-areas:
     "main-title"
     "agenda"
     "location-date";
@@ -73,14 +73,15 @@ header ul li{
 
 
 /* TICKETS STYLING */
-/* MOBILE UNDER 768 */
-
 .ticket-wrapper {
   display: grid;
   grid-template-rows: 1fr 9fr 1fr;
   grid-template-columns: 2fr 8fr 2fr;
   grid-area: ticket-wrapper;
-  grid-template-areas: 
+  background-image: linear-gradient(rgba(236, 82, 66), rgba(211, 211, 211, 0.5));
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-template-areas:
     "tickets-title tickets-title tickets-title"
     ". ticket-table ."
     ". . .";
@@ -90,7 +91,6 @@ header ul li{
   grid-area: tickets-title;
   font-size: 1.4rem;
   margin-bottom: 1em;
-
 }
 
 .ticket-table {
@@ -100,9 +100,19 @@ header ul li{
   grid-template-rows: repeat(3, auto);
   grid-gap: 15px;
   border: 15px solid;
-  border-image: 16 repeating-linear-gradient(-45deg, red 0, red 1em, transparent 0, transparent 2em,
-	              #58a 0, #58a 3em, transparent 0, transparent 4em);
-  grid-template-areas: 
+  border-image:
+    16 repeating-linear-gradient(
+      -45deg,
+      red 0,
+      red 1em,
+      transparent 0,
+      transparent 2em,
+      #58a 0,
+      #58a 3em,
+      transparent 0,
+      transparent 4em
+    );
+  grid-template-areas:
     "early-bird-tckt"
     "standard-tckt"
     "all-in-tckt";
@@ -124,11 +134,11 @@ header ul li{
 }
 
 .add-2-cart {
-  border: 1px solid #EC5242;
+  border: 1px solid #ec5242;
   outline: 0;
   padding: 12px;
   color: white;
-  background-color: #EC5242;
+  background-color: #ec5242;
   text-align: center;
   cursor: pointer;
   width: 100%;
@@ -139,71 +149,64 @@ header ul li{
   opacity: 0.7;
 }
 
-.ticket-wrapper {
-  background-image: linear-gradient(rgba(236, 82, 66), rgba(211, 211, 211, 0.5));
-  background-repeat: no-repeat;
-  background-size: cover;
-
-}
 
 /* MAIN-PAGE GRID LAYOUT-IPAD AND PC OVER 768PX */
 
 @media screen and (min-width: 768px) {
+  .main-page {
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+    grid-template-columns: 1fr 6fr 1fr;
+  }
 
-.main-page {
-  display: grid;
-  grid-template-rows: 1fr 2fr 2fr 1fr;
-  grid-template-columns: 1fr 6fr 1fr;
+  .main-title {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-bottom: 4em;
+  }
 
-}
+  .agenda {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
 
-.main-title {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  margin-bottom: 4em;
-}
+  .location-date {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
 
-.agenda {
-  grid-column: 2/3;
-  grid-row: 3/4;
-}
+  .main-title,
+  .agenda,
+  .location-date {
+    text-align: center !important;
+  }
 
-.location-date {
-  grid-column: 2/3;
-  grid-row: 4/5;
-}
+  /* ANIMATION */
+  header nav li a {
+    color: #fff;
+    display: block;
+    position: relative;
+    padding: 20px 20px 10px;
+  }
 
-.main-title,
-.agenda,
-.location-date {
-  text-align: center !important;
-}
+  header nav li a::before,
+  header nav li a::after {
+    content: "";
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
 
-/* ANIMATION */
-header nav li a {
-  color: #fff;
-  display: block;
-  position: relative;
-  padding: 20px 20px 10px;
-}
+  header nav li a::before { right: 50%; }
+  header nav li a::after { left: 50%; }
 
-header nav li a:before, 
-header nav li a:after {
-  content: "";
-  bottom: 0;
-  width: 0px;
-  height: 2px;
-  display: block;
-  position: absolute;
-  background-color: #fff;
-  -webkit-transition: all 0.3s ease-in-out;
-          transition: all 0.3s ease-in-out;  
-}
-
-header nav li a:before { right: 50%; }
-header nav li a:after { left: 50%; }
-
-header nav li a:hover:before , header nav li a:hover:after {
-  width: 50%;
-}
+  header nav li a:hover::before,
+  header nav li a:hover::after {
+    width: 50%;
+  }
 }
