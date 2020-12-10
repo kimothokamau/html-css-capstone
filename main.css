@@ -57,7 +57,7 @@ header ul li{
 
 .main-page {
   display: grid;
-  grid-template-rows: 1fr 2fr 100px;
+  grid-template-rows: 300px 300px 100px;
   grid-template-areas: 
     "main-title"
     "agenda"

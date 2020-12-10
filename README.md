@@ -10,7 +10,7 @@ The website is a landing page for a Web Developer's conference, with a page for 
 The main page and the tickets page are responsive in two breakpoints.
 
 
-![screenshot](./asset/screenshot.png)
+![screenshot](./images/desktop-screenshot.png)
  
 ## Built With
 
