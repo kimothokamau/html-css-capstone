@@ -3,7 +3,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 
-A Responsive Mobile, iPad, and Web page clone of The Next Web (https://thenextweb.com/). We used css grid and css flex to position all of the elements in this project. 
+This webiste was done as the final /capstone project of the Micorverse's HTML/CSS curriculum
 
 
 ![screenshot](./asset/screenshot.png)
