@@ -71,7 +71,6 @@ header ul li {
   margin: 1em 0 0 0.5em;
 }
 
-
 /* TICKETS STYLING */
 .ticket-wrapper {
   display: grid;
@@ -149,9 +148,7 @@ header ul li {
   opacity: 0.7;
 }
 
-
 /* MAIN-PAGE GRID LAYOUT-IPAD AND PC OVER 768PX */
-
 @media screen and (min-width: 768px) {
   .main-page {
     display: grid;
