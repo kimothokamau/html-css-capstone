@@ -214,3 +214,8 @@ header nav li a:hover:before , header nav li a:hover:after {
   width: 50%;
 }
 }
+
+ul li a:hover {
+  color: orange;
+  text-decoration: underline;
+}
