@@ -16,7 +16,7 @@ body {
 }
 
 header ul li{
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .text-grey {
@@ -71,12 +71,6 @@ header ul li{
   margin: 1em 0 0 0.5em;
 }
 
-
-
-/* .lead > .text-dark {
-  font-size: 1.2rem;
-  padding: 0 0.5em;
-} */
 
 /* TICKETS STYLING */
 /* MOBILE UNDER 768 */
@@ -212,9 +206,4 @@ header nav li a:after { left: 50%; }
 header nav li a:hover:before , header nav li a:hover:after {
   width: 50%;
 }
-}
-
-ul li a:hover {
-  color: orange;
-  text-decoration: underline;
 }
