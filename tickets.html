@@ -3,17 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>React Developers Conference:East Africa Edition 2021</title>
+  <title>Tickets Page-React Africa</title>
   <link rel="stylesheet" href="./main.css">
   <link rel="stylesheet" href="./reset.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-
-
 </head>
-<body class="container-fluid m-0 p-0">
+<body class="bg-light container-fluid m-0 p-0">
   <header>
     <ul class="nav justify-content-end bg-dark px-5 d-none d-md-flex">
       <li class="nav-item">
@@ -32,7 +30,7 @@
         <a class="nav-link text-white" href="#">Logout</a>
       </li>
     </ul>
-    <nav class="navbar navbar-expand-md navbar-light bg-orange d-md-px-5">
+    <nav class="navbar navbar-expand-md navbar-light bg-orange px-5">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -53,7 +51,7 @@
               <a class="nav-link active" href="#">Speakers</a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link active" href="./tickets.html">Tickets</a>
+              <a class="nav-link active" href="#">Tickets</a>
             </li>
 
           </ul>
@@ -61,27 +59,52 @@
       </div>
     </nav>
   </header>
-    <!-- THE MAIN BACKGROUND IMAGE -->
-        <div class="page-holder bg-cover">
-          <div class="main-page">
-            <header class="main-title text-white font-weight-700 ">
-              <h1 class="display-4 font-weight-700 mb-4 text-uppercase text-dark">React JS Conference: Africa Edition</h1>
-              <p class="lead fst-italic text-black font-monospace">"A three day gathering of Front-end and Full-stack engineers around the world"</p>
-              
-            </header>
-        
-            <div class="agenda text-white fs-4 lh-lg font-weight-700 font-monospace">
-              <p class="lead"> <u class="text-dark titles"  >Schedule:</u> Talks, breakout sessions, hackathons</p>
-              <p class="lead"> <u class="text-dark titles">Topics:</u>React Hooks, React Native, Redux, WebPack among others!</p>
-              <p class="lead"> <u class="text-dark titles">Sponsors:</u>  Google, Facebook, Equity, Safaricom, MTN, Kengen, Andela </p>
-            </div>
-            <div class="location-date">
-              <p class="font-italic font-monospace">Location:  <a target="blank_" href="https://goo.gl/maps/focWcsF37ym25Wqe9" class="text-orange">
-                <u>Nairobi, Kenya</u></a>
-            </p>
-            </div>
-          </div>
-        </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <section class="ticket-wrapper mt-5 mx-md-5">
+
+    <h1 class="tickets-title text-center">Select Tickets</h1>
+    <div class="ticket-table">
+      <div class="early-bird-tckt d-flex flex-column">
+        <h4>Early-bird Ticket</h4>
+        <p>Get 75% discount</p>
+        <p>Opening ceremony</p>
+        <p>Free pass all talks</p>
+        <p>Attend any 3 of the 5 breakout sessions</p>
+        <p>Coffee, lunch, dinner</p>
+        <p>After party</p>
+        <p>2-day safari tour</p>
+        <p class="price">$100</p>
+        <button class="add-2-cart">Add to Cart</button>
+
+      </div>
+      <div class="standard-tckt d-flex flex-column">
+        <h4>Standard Ticket</h4>
+        <p>Get 75% discount</p>
+        <p>Opening ceremony</p>
+        <p>Free pass all talks</p>
+        <p>Attend any 3 of the 5 breakout sessions</p>
+        <p>Coffee, lunch, dinner</p>
+        <p>After party</p>
+        <p>2-day safari tour</p>
+        <p class="price">$200</p>
+        <button class="add-2-cart">Add to Cart</button>
+      </div>
+      <div class="all-in-tckt d-flex flex-column">
+        <h4>The All-IN Ticket</h4>
+        <p>Get 75% discount</p>
+        <p>Opening ceremony</p>
+        <p>Free pass all talks</p>
+        <p>Attend any 3 of the 5 breakout sessions</p>
+        <p>Coffee, lunch, dinner</p>
+        <p>After party</p>
+        <p>2-day safari tour</p>
+        <p class="price">$300</p>
+        <button class="add-2-cart">Add to Cart</button>
+      </div>
+    </div>
+    
+    
+  </section>
+  
 </body>
 </html>

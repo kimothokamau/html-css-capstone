@@ -46,15 +46,173 @@ header ul li{
 
 .page-holder {
   min-height: 90vh;
-  background-image: linear-gradient(to bottom, rgba(236, 82, 66, 0.4), rgba(211, 211, 211, 0.73)),
+  background-image: linear-gradient(to bottom, rgba(236, 82, 66), rgba(211, 211, 211, 0.5)),
   url(https://images.pexels.com/photos/2833037/pexels-photo-2833037.jpeg?cs=srgb&dl=pexels-luis-quintero-2833037.jpg&);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  opacity: 0.9;
+
 }
 
 .bg-cover {
   background-size: cover !important;
 }
 
+.main-page {
+  display: grid;
+  grid-template-rows: 1fr 2fr 100px;
+  grid-template-areas: 
+    "main-title"
+    "agenda"
+    "location-date";
+}
 
+.main-title,
+.agenda,
+.location-date {
+  text-align: left !important;
+  margin: 1em 0 0 0.5em;
+}
+
+
+
+/* .lead > .text-dark {
+  font-size: 1.2rem;
+  padding: 0 0.5em;
+} */
+
+/* TICKETS STYLING */
+/* MOBILE UNDER 768 */
+
+.ticket-wrapper {
+  display: grid;
+  grid-template-rows: 1fr 9fr 1fr;
+  grid-template-columns: 2fr 8fr 2fr;
+  grid-area: ticket-wrapper;
+  grid-template-areas: 
+    "tickets-title tickets-title tickets-title"
+    ". ticket-table ."
+    ". . .";
+}
+
+.tickets-title {
+  grid-area: tickets-title;
+  font-size: 1.4rem;
+  margin-bottom: 1em;
+
+}
+
+.ticket-table {
+  display: grid;
+  grid-area: ticket-table;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 15px;
+  border: 15px solid;
+  border-image: 16 repeating-linear-gradient(-45deg, red 0, red 1em, transparent 0, transparent 2em,
+	              #58a 0, #58a 3em, transparent 0, transparent 4em);
+  grid-template-areas: 
+    "early-bird-tckt"
+    "standard-tckt"
+    "all-in-tckt";
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.early-bird-tckt,
+.standard-tckt,
+.all-in-tckt {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  font-weight: 700;
+}
+
+.add-2-cart {
+  border: 1px solid #EC5242;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #EC5242;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.ticket-wrapper {
+  background-image: linear-gradient(rgba(236, 82, 66), rgba(211, 211, 211, 0.5));
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+/* MAIN-PAGE GRID LAYOUT-IPAD AND PC OVER 768PX */
+
+@media screen and (min-width: 768px) {
+
+.main-page {
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+  grid-template-columns: 1fr 6fr 2fr;
+
+}
+
+.main-title {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin-bottom: 4em;
+}
+
+.agenda {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.location-date {
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
+
+.main-title,
+.agenda,
+.location-date {
+  text-align: center !important;
+}
+
+/* ANIMATION */
+header nav li a {
+  color: #fff;
+  display: block;
+  position: relative;
+  padding: 20px 20px 10px;
+}
+
+header nav li a:before, 
+header nav li a:after {
+  content: "";
+  bottom: 0;
+  width: 0px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;  
+}
+
+header nav li a:before { right: 50%; }
+header nav li a:after { left: 50%; }
+
+header nav li a:hover:before , header nav li a:hover:after {
+  width: 50%;
+}
+
+
+}
