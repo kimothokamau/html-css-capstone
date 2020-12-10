@@ -5,6 +5,10 @@
 
 This webiste was done as the final /capstone project of the Micorverse's HTML/CSS curriculum
 
+The website is a landing page for a Web Developer's conference, with a page for tickets.
+
+The main page and the tickets page are responsive in two breakpoints.
+
 
 ![screenshot](./asset/screenshot.png)
  
