@@ -46,15 +46,16 @@ header ul li {
 main {
   display: grid;
   grid-template-rows: 750px 1000px 750px;
-  grid-template-areas: 
+  grid-template-areas:
     "main-page"
     "program"
     "speakers";
 }
 
 .page-holder {
-  background-image:linear-gradient(to bottom, rgb(95, 86, 86), rgba(211, 211, 211, 0.2)),
-  url(https://images.pexels.com/photos/2833037/pexels-photo-2833037.jpeg?cs=srgb&dl=pexels-luis-quintero-2833037.jpg&);
+  background-image:
+    linear-gradient(to bottom, rgb(95, 86, 86), rgba(211, 211, 211, 0.2)),
+    url(https://images.pexels.com/photos/2833037/pexels-photo-2833037.jpeg?cs=srgb&dl=pexels-luis-quintero-2833037.jpg&);
   opacity: 0.7;
   background-size: cover;
 }
@@ -115,7 +116,7 @@ main {
   grid-template-rows: 100px 5fr 100px;
   text-align: center;
   padding: 0.5em;
-  grid-template-areas: 
+  grid-template-areas:
     "prog-title"
     "prog-cards"
     "whole-prog";
@@ -149,7 +150,6 @@ main {
 
 .prog-cards div h4 {
   font-size: 1rem;
-
 }
 
 .prog-cards div p {
@@ -167,7 +167,7 @@ main {
   display: grid;
   grid-template-rows: 100px repeat(4, 200px);
   row-gap: 15px;
-  grid-template-areas: 
+  grid-template-areas:
     "speaker-title"
     "speaker1"
     "speaker2"
@@ -226,7 +226,7 @@ main {
   main {
     display: grid;
     grid-template-rows: 750px 1600px;
-    grid-template-areas: 
+    grid-template-areas:
       "main-page"
       "main-program";
   }
@@ -237,7 +237,7 @@ main {
     text-align: left;
     grid-template-rows: 1fr 2fr 2fr 1fr;
     grid-template-columns: 1fr 6fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
       ". . ."
       ". main-title ."
       ". agenda ."
@@ -262,7 +262,7 @@ main {
     grid-template-columns: 1fr 6fr 1fr;
     grid-template-rows: 500px 700px 200px 150px;
     grid-area: main-program;
-    grid-template-areas: 
+    grid-template-areas:
       "program program program"
       ". speakers ."
       "partners partners partners"
@@ -276,7 +276,7 @@ main {
     grid-template-rows: 1fr 2fr 1fr;
     text-align: center;
     align-items: center;
-    grid-template-areas: 
+    grid-template-areas:
       "prog-title prog-title prog-title"
       ". prog-cards ."
       "whole-prog whole-prog whole-prog";
@@ -286,17 +286,17 @@ main {
     grid-area: prog-title;
     text-transform: uppercase;
   }
-  .prog-title:hover{
+
+  .prog-title:hover {
     text-decoration: underline;
     cursor: pointer;
   }
 
-  .prog-cards{
+  .prog-cards {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 0.5em;
     grid-area: prog-cards;
-    gap: 4px;  
   }
 
   .prog-cards div {
@@ -305,6 +305,14 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .footer > div {
+    grid-column: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 0 1em 0;
   }
 
   .prog-cards div:hover {
@@ -371,6 +379,16 @@ main {
     font-weight: bold;
   }
 
+  .partner-logos img {
+    width: 70px;
+    height: auto;
+  }
+
+  .footer img {
+    width: 100px;
+    height: auto;
+  }
+
   .speakers div img {
     height: auto;
     width: 100%;
@@ -381,26 +399,31 @@ main {
     grid-column: 2/3;
     grid-row: 2/3;
   }
+
   .speaker2 {
     grid-area: speaker2;
     grid-column: 3/4;
     grid-row: 2/3;
   }
+
   .speaker3 {
     grid-area: speaker3;
     grid-column: 2/3;
     grid-row: 3/4;
   }
+
   .speaker4 {
     grid-area: speaker4;
     grid-column: 3/4;
     grid-row: 3/4;
   }
+
   .speaker5 {
     grid-area: speaker5;
     grid-column: 2/3;
     grid-row: 4/5;
   }
+
   .speaker6 {
     grid-area: speaker6;
     grid-column: 3/4;
@@ -413,7 +436,7 @@ main {
     text-align: center;
     grid-template-columns: 1fr 6fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
       ". partner-title ."
       ". partner-logos .";
   }
@@ -427,16 +450,11 @@ main {
 
   .partner-logos {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
     grid-area: partner-logos;
     list-style: none;
     margin-bottom: 1em;
-  }
-
-  .partner-logos img {
-    width: 70px;
-    height: auto;
   }
 
   .footer {
@@ -446,18 +464,9 @@ main {
     align-items: center;
   }
 
-  .footer img {
-    width: 100px;
-    height: auto;
-  }
 
-  .footer > div {
-    grid-column: 2/3;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em 0 1em 0;
-  }
+
+
 
 
   /* ANIMATION */

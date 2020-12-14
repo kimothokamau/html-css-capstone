@@ -3,8 +3,6 @@
   font-family: 'Lato', sans-serif;
 }
 
-
-
 .text-grey {
   color: #d3d3d3;
 }
@@ -40,10 +38,11 @@ main {
   display: grid;
   grid-template-rows: 1fr 1fr;
   row-gap: 10px;
-  grid-template-areas: 
+  grid-template-areas:
     "ticket-wrapper"
     "lunch-wrapper";
 }
+
 .ticket-wrapper {
   display: grid;
   grid-template-rows: 1fr 9fr 1fr;
@@ -124,7 +123,7 @@ main {
   grid-template-columns: 1fr 6fr 1fr;
   gap: 15px;
   text-align: center;
-  grid-template-areas: 
+  grid-template-areas:
     ". slct-lunch ."
     ". vegetarians ."
     ". meaters ."
@@ -169,4 +168,3 @@ main {
   width: 30%;
   margin: 0 auto 0 auto;
 }
-

@@ -36,7 +36,7 @@ body {
 main {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "about-page1"
     "about-page2";
 }
@@ -45,7 +45,7 @@ main {
   grid-area: about-page1;
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "about-main"
     "about-branding";
 }
@@ -53,6 +53,7 @@ main {
 .about-main {
   text-align: center;
 }
+
 .about-head {
   font-weight: 700;
 }
@@ -78,7 +79,7 @@ main {
 
 .branding-text {
   line-height: 1.5;
-  letter-spacing: 0.04;
+  letter-spacing: 0.04em;
 }
 
 .branding-logo img {
@@ -96,7 +97,7 @@ main {
   text-align: center;
   grid-template-rows: 100px 2fr 200px;
   row-gap: 1em;
-  grid-template-areas: 
+  grid-template-areas:
     "past-conf"
     "past-conf-images"
     "footer";
@@ -107,14 +108,13 @@ main {
   margin: 0 1em 0 1em;
 }
 
-
 .past-conf-images {
   grid-area: past-conf-images;
   display: grid;
   margin: 0 2em 0 2em;
   row-gap: 1em;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "past-conf1"
     "past-conf2";
 }
@@ -123,7 +123,6 @@ main {
   grid-area: past-conf1;
   background-image: url(./images/accra.jpg);
   background-size: cover;
-
 }
 
 .past-conf2 {
@@ -135,7 +134,6 @@ main {
 .footer {
   grid-area: footer;
   padding: 1em;
-
 }
 
 .footer img {
@@ -147,6 +145,7 @@ main {
 .past-conf-images div * {
   font-weight: 700;
 }
+
 .past-conf-images div:hover {
   cursor: pointer;
 }
@@ -155,7 +154,7 @@ main {
   main {
     display: grid;
     grid-template-rows: 950px 1150px;
-    grid-template-areas: 
+    grid-template-areas:
       "about-page1"
       "about-page2";
   }
@@ -164,7 +163,7 @@ main {
     grid-area: about-page1;
     display: grid;
     grid-template-rows: 2fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
       "about-main"
       "about-branding";
   }
@@ -175,7 +174,7 @@ main {
     text-align: center;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 6fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
       ". about-head ."
       ". about-text ."
       ". about-contact .";
@@ -203,7 +202,7 @@ main {
     grid-template-columns: 1fr 6fr 1fr;
     grid-template-rows: 1fr 1fr;
     text-align: center;
-    grid-template-areas: 
+    grid-template-areas:
       ". branding-title ."
       ". branding-text ."
       ". branding-logo .";
@@ -232,7 +231,6 @@ main {
   .branding-date {
     font-style: italic;
     font-weight: 700;
-
   }
 
   .about-page2 {
@@ -242,11 +240,12 @@ main {
     grid-template-columns: 1fr 6fr 1fr;
     grid-template-rows: 150px 1fr 200px;
     row-gap: 1em;
-    grid-template-areas: 
+    grid-template-areas:
       ". past-conf ."
       ". past-conf-images ."
       "footer footer footer";
   }
+
   .past-conf {
     grid-area: past-conf;
     display: flex;
@@ -265,14 +264,12 @@ main {
     column-gap: 1em;
     grid-template-columns: 1fr 1fr;
     justify-content: space-around;
-    grid-template-areas: 
-      "past-conf1 past-conf2";
+    grid-template-areas: "past-conf1 past-conf2";
   }
 
   .past-conf1 {
     background-image: url(./images/accra.jpg);
     background-size: cover;
-  
   }
 
   .past-conf2 {
@@ -283,6 +280,14 @@ main {
   .past-conf-images div * {
     font-weight: 700;
   }
+
+  .footer > div {
+    grid-column: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .past-conf-images div:hover {
     cursor: pointer;
   }
@@ -298,14 +303,4 @@ main {
     width: 100px;
     height: auto;
   }
-
-  .footer >div {
-    grid-column: 2/3;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-
-
 }
