@@ -52,7 +52,7 @@ main {
 }
 
 .page-holder {
-  background-image:linear-gradient(to bottom, rgba(255, 255, 255), rgba(211, 211, 211, 0.3)),
+  background-image:linear-gradient(to bottom, rgb(95, 86, 86), rgba(211, 211, 211, 0.2)),
   url(https://images.pexels.com/photos/2833037/pexels-photo-2833037.jpeg?cs=srgb&dl=pexels-luis-quintero-2833037.jpg&);
   opacity: 0.7;
   background-size: cover;
@@ -72,6 +72,12 @@ main {
 .location-date {
   text-align: left;
   margin: 1em 0 0 0.5em;
+  font-weight: 900;
+}
+
+.location-date p {
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .title1 {
@@ -84,93 +90,18 @@ main {
 .title2 {
   font-size: 25px;
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 
 
-/* TICKETS STYLING */
-.ticket-wrapper {
-  display: grid;
-  grid-template-rows: 1fr 9fr 1fr;
-  grid-template-columns: 2fr 8fr 2fr;
-  grid-area: ticket-wrapper;
-  background-image: linear-gradient(rgba(236, 82, 66), rgba(211, 211, 211, 0.5));
-  background-repeat: no-repeat;
-  background-size: cover;
-  grid-template-areas:
-    "tickets-title tickets-title tickets-title"
-    ". ticket-table ."
-    ". . .";
-}
 
-.tickets-title {
-  grid-area: tickets-title;
-  font-size: 1.4rem;
-  margin-bottom: 1em;
-}
-
-.ticket-table {
-  display: grid;
-  grid-area: ticket-table;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-template-rows: repeat(3, auto);
-  grid-gap: 15px;
-  border: 15px solid;
-  border-image:
-    16 repeating-linear-gradient(
-      -45deg,
-      red 0,
-      red 1em,
-      transparent 0,
-      transparent 2em,
-      #58a 0,
-      #58a 3em,
-      transparent 0,
-      transparent 4em
-    );
-  grid-template-areas:
-    "early-bird-tckt"
-    "standard-tckt"
-    "all-in-tckt";
-}
-
-.price {
-  color: grey;
-  font-size: 22px;
-}
-
-.early-bird-tckt,
-.standard-tckt,
-.all-in-tckt {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  text-align: center;
-  font-size: 14px;
-  color: white;
-  font-weight: 700;
-}
-
-.add-2-cart {
-  border: 1px solid #ec5242;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #ec5242;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-.btn:hover {
-  opacity: 0.7;
-}
 
 /* MAIN-PAGE GRID LAYOUT-IPAD AND PC OVER 768PX */
 @media screen and (min-width: 768px) {
   main {
     display: grid;
-    grid-template-rows: 750px 1300px;
+    grid-template-rows: 750px 1350px;
     grid-template-areas: 
       "main-page"
       "main-program";
@@ -401,6 +332,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1em 0 1em 0;
   }
 
 

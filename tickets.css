@@ -1,0 +1,172 @@
+/* TICKETS STYLING */
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+
+
+.text-grey {
+  color: #d3d3d3;
+}
+
+.text-orange {
+  color: #ec5242;
+}
+
+.text-black {
+  color: #272a31;
+}
+
+.bg-grey {
+  background-color: #d3d3d3;
+}
+
+.bg-orange {
+  background-color: #ec5242;
+}
+
+.bg-black {
+  background-color: #272a31;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #272a31;
+}
+
+main {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 10px;
+  grid-template-areas: 
+    "ticket-wrapper"
+    "lunch-wrapper";
+}
+.ticket-wrapper {
+  display: grid;
+  grid-template-rows: 1fr 9fr 1fr;
+  grid-template-columns: 1fr 6fr 1fr;
+  grid-area: ticket-wrapper;
+  grid-template-areas:
+    "tickets-title tickets-title tickets-title"
+    ". ticket-table ."
+    ". . .";
+}
+
+.tickets-title {
+  grid-area: tickets-title;
+  font-size: 1.4rem;
+  margin-top: 1em;
+}
+
+.ticket-table {
+  display: grid;
+  grid-area: ticket-table;
+  background-color: white;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 15px;
+  border: 10px solid;
+  border-image:
+    16 repeating-linear-gradient(
+      -30deg,
+      red 0,
+      red 1em,
+      transparent 0,
+      transparent 2em,
+      #58a 0,
+      #58a 3em,
+      transparent 0,
+      transparent 4em
+    );
+  grid-template-areas:
+    "early-bird-tckt"
+    "standard-tckt"
+    "all-in-tckt";
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.early-bird-tckt,
+.standard-tckt,
+.all-in-tckt {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.add-2-cart {
+  border: 1px solid #ec5242;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #ec5242;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.lunch-wrapper {
+  grid-area: lunch-wrapper;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 6fr 1fr;
+  gap: 15px;
+  text-align: center;
+  grid-template-areas: 
+    ". slct-lunch ."
+    ". vegetarians ."
+    ". meaters ."
+    ". sbmit-order .";
+}
+
+.slct-lunch {
+  grid-area: slct-lunch;
+  align-self: center;
+  justify-content: center;
+}
+
+.vegetarians {
+  grid-area: vegetarians;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  margin-bottom: 4em;
+}
+
+.vegetarians h4,
+.meaters h4 {
+  background-color: lightgray;
+}
+
+.veg-menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.meaters {
+  grid-area: meaters;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  margin-bottom: 4em;
+}
+
+.sbmit-order {
+  grid-area: sbmit-order;
+  height: 50px;
+  width: 30%;
+  margin: 0 auto 0 auto;
+}
+
