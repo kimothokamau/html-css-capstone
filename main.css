@@ -1,9 +1,9 @@
+
 * {
   font-family: 'Lato', sans-serif;
 }
 
 body {
-  width: 100%;
   margin: 0;
   padding: 0;
   color: #272a31;
@@ -45,10 +45,11 @@ header ul li {
 
 main {
   display: grid;
-  grid-template-rows: 750px 1200px;
+  grid-template-rows: 750px 1000px 750px;
   grid-template-areas: 
     "main-page"
-    "main-program";
+    "program"
+    "speakers";
 }
 
 .page-holder {
@@ -93,15 +94,138 @@ main {
   font-weight: 400;
 }
 
+.prog-img {
+  width: 70px;
+  height: 70px;
+}
 
+.partner-logos a img {
+  width: 100px;
+  height: 100px;
+}
 
+.footer div img {
+  width: 100px;
+  height: 100px;
+}
+
+.program {
+  display: grid;
+  grid-area: program;
+  grid-template-rows: 100px 5fr 100px;
+  text-align: center;
+  padding: 0.5em;
+  grid-template-areas: 
+    "prog-title"
+    "prog-cards"
+    "whole-prog";
+}
+
+.prog-title {
+  grid-area: prog-title;
+  text-transform: uppercase;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  color: white;
+}
+
+.prog-cards {
+  display: grid;
+  grid-area: prog-cards;
+  grid-template-rows: repeat(5, 1fr);
+  row-gap: 10px;
+}
+
+.prog-cards div {
+  display: grid;
+  grid-template-columns: 100px 150px 1fr;
+  text-align: left;
+  align-items: center;
+  border: 1px solid grey;
+  padding: 0.5em;
+  margin: 0 1em 0 1em;
+  background-color: #524e4e;
+}
+
+.prog-cards div h4 {
+  font-size: 1rem;
+
+}
+
+.prog-cards div p {
+  color: white;
+}
+
+.whole-prog {
+  grid-area: whole-prog;
+  margin-top: 2.5em;
+  margin-bottom: 2em;
+}
+
+.speakers {
+  grid-area: speakers;
+  display: grid;
+  grid-template-rows: 100px repeat(4, 200px);
+  row-gap: 15px;
+  grid-template-areas: 
+    "speaker-title"
+    "speaker1"
+    "speaker2"
+    "speaker3"
+    "speaker4";
+}
+
+.speaker-title {
+  grid-area: speaker-title;
+  text-align: center;
+  margin-top: 1em;
+  color: #272a31;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.speaker1 {
+  grid-area: speaker1;
+}
+
+.speaker2 {
+  grid-area: speaker2;
+}
+
+.speaker3 {
+  grid-area: speaker3;
+}
+
+.speaker4 {
+  grid-area: speaker4;
+  margin-bottom: 2em;
+}
+
+.speaker5,
+.speaker6 {
+  display: none;
+}
+
+.speaker-card {
+  display: flex;
+}
+
+.speaker-bio {
+  text-align: left;
+  padding: 0 1em;
+}
+
+.partners,
+.footer {
+  display: none;
+}
 
 
 /* MAIN-PAGE GRID LAYOUT-IPAD AND PC OVER 768PX */
 @media screen and (min-width: 768px) {
   main {
     display: grid;
-    grid-template-rows: 750px 1350px;
+    grid-template-rows: 750px 1600px;
     grid-template-areas: 
       "main-page"
       "main-program";
@@ -136,7 +260,7 @@ main {
   .main-program {
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
-    grid-template-rows: 2fr 3fr 1fr 1fr;
+    grid-template-rows: 500px 700px 200px 150px;
     grid-area: main-program;
     grid-template-areas: 
       "program program program"
@@ -327,7 +451,7 @@ main {
     height: auto;
   }
 
-  .footer >div {
+  .footer > div {
     grid-column: 2/3;
     display: flex;
     align-items: center;
