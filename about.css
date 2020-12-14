@@ -1,0 +1,45 @@
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #272a31;
+}
+
+.text-grey {
+  color: #d3d3d3;
+}
+
+.text-orange {
+  color: #ec5242;
+}
+
+.text-black {
+  color: #272a31;
+}
+
+.bg-grey {
+  background-color: #d3d3d3;
+}
+
+.bg-orange {
+  background-color: #ec5242;
+}
+
+.bg-black {
+  background-color: #272a31;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-rows: 750px 600px;
+    grid-template-areas: 
+      "about-page1"
+      "about-page2";
+  }
+
+}
