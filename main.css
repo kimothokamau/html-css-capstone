@@ -220,7 +220,6 @@ main {
   display: none;
 }
 
-
 /* MAIN-PAGE GRID LAYOUT-IPAD AND PC OVER 768PX */
 @media screen and (min-width: 768px) {
   main {
@@ -463,11 +462,6 @@ main {
     grid-template-columns: 1fr 6fr 1fr;
     align-items: center;
   }
-
-
-
-
-
 
   /* ANIMATION */
   header nav li a {
